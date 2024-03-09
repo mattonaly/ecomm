@@ -6,11 +6,10 @@
       selected: selectedIndex === i,
       disabled: step.disabled || (disabled && selectedIndex !== i)
     }"
+    (click)="!disabled && selectStep(i)"
   >
     <div>
-      <span class="circle" (click)="!disabled && selectStep(i)">{{
-        i + 1
-      }}</span>
+      <span class="circle">{{ i + 1 }}</span>
       <span class="step-name">{{ step.label }}</span>
     </div>
     <i
