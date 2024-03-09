@@ -1,0 +1,36 @@
+<div class="card">
+  <header>
+    <h4>Description</h4>
+    <span class="color-primary-red">* is required</span>
+  </header>
+  <form [formGroup]="form">
+    <div class="control control-required">
+      <input
+        pInputText
+        type="text"
+        formControlName="marketingName"
+        placeholder="Marketing name"
+      />
+      <i class="pi pi-info-circle" pTooltip="Lorem ipsum"></i>
+    </div>
+    <div class="control">
+      <input
+        pInputText
+        type="text"
+        formControlName="technicalName"
+        placeholder="Technical name"
+      />
+      <i class="pi pi-info-circle" pTooltip="Lorem ipsum"></i>
+    </div>
+    <div class="control control-description">
+      <textarea
+        pInputTextarea
+        rows="5"
+        cols="30"
+        formControlName="description"
+        placeholder="Description"
+      ></textarea>
+      <i class="pi pi-info-circle" pTooltip="Lorem ipsum"></i>
+    </div>
+  </form>
+</div>

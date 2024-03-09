@@ -1,0 +1,22 @@
+<div class="stepper card">
+  <div
+    *ngFor="let step of steps; let i = index"
+    class="step"
+    [ngClass]="{
+      selected: selectedIndex === i,
+      disabled: step.disabled || (disabled && selectedIndex !== i)
+    }"
+  >
+    <div>
+      <span class="circle" (click)="!disabled && selectStep(i)">{{
+        i + 1
+      }}</span>
+      <span class="step-name">{{ step.label }}</span>
+    </div>
+    <i
+      *ngIf="step.disabled"
+      class="pi pi-info-circle required"
+      pTooltip="Lorem ipsum"
+    ></i>
+  </div>
+</div>

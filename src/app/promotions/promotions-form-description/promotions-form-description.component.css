@@ -1,0 +1,38 @@
+input,
+textarea {
+  width: 100%;
+}
+
+form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+}
+
+.control {
+  display: flex;
+  justify-content: space-between;
+
+  i {
+    margin: auto 0 auto 0;
+    color: var(--primary-red);
+  }
+}
+
+.control-required {
+  position: relative;
+}
+
+.control-required::after {
+  content: "*";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  color: var(--primary-red);
+}
+
+.control-description {
+  i {
+    margin-top: 16px;
+  }
+}

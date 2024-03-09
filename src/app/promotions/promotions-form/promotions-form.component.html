@@ -1,0 +1,36 @@
+<app-promotions-form-stepper
+  [steps]="steps"
+  [disabled]="descriptionForm.invalid"
+  (stepSelectionChange)="onStepSelected($event)"
+></app-promotions-form-stepper>
+<content>
+  <ng-container *ngIf="selectedIndex === 0">
+    <section>
+      <app-promotions-form-description
+        [form]="descriptionForm"
+      ></app-promotions-form-description>
+      <app-promotions-form-tutorial></app-promotions-form-tutorial>
+    </section>
+    <section>
+      <app-promotions-form-conditions
+        [form]="conditionsForm"
+      ></app-promotions-form-conditions>
+    </section>
+  </ng-container>
+  <ng-container *ngIf="selectedIndex > 0 && selectedIndex < 8">
+    <section>
+      <div class="card">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+        ratione quia maxime sapiente repellat ut beatae, eveniet aut obcaecati
+        temporibus quam esse ab quo est velit sequi ea exercitationem fugit?
+      </div>
+    </section>
+  </ng-container>
+  <ng-container *ngIf="selectedIndex === 8">
+    <section>
+      <div>
+        <button class="save-button" (click)="save()">Save</button>
+      </div>
+    </section>
+  </ng-container>
+</content>

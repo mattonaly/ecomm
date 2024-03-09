@@ -1,0 +1,38 @@
+:host {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+
+.add-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  min-width: 120px;
+
+  background-color: var(--primary-red);
+  color: white;
+
+  span {
+    margin: auto;
+  }
+}
+
+.icon-button {
+  background: none;
+}
+
+.icon-button--edit {
+  color: var(--blue-500);
+}
+
+.icon-button--delete {
+  color: var(--red-500);
+}
+
+.table-column-no,
+.table-column-name {
+  background-color: var(--primary-red);
+  color: white;
+}

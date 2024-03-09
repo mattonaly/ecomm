@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+section {
+  border-right: 1px solid white;
+
+  > :last-of-type {
+    border-right: unset;
+  }
+}
+
+.save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  min-width: 120px;
+
+  background-color: var(--primary-red);
+  color: white;
+
+  span {
+    margin: auto;
+  }
+}

@@ -1,0 +1,37 @@
+<header>
+  <button class="add-button" (click)="createPromotion()">
+    <i class="pi pi-plus"></i>
+    <span>Add</span>
+  </button>
+</header>
+
+<p-table *ngIf="promotions$ | async as promotions" [value]="promotions">
+  <ng-template pTemplate="header">
+    <tr>
+      <th class="table-column-no">No.</th>
+      <th class="table-column-name">Name</th>
+      <th class="table-column-actions">Actions</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-promotion>
+    <tr>
+      <td>{{ promotion.id }}</td>
+      <td>{{ promotion.marketingName }}</td>
+      <td>
+        <button
+          class="icon-button icon-button--edit"
+          (click)="edit(promotion.id)"
+        >
+          <i class="pi pi-pencil"></i>
+        </button>
+        <button
+          class="icon-button icon-button--delete"
+          (click)="delete(promotion.id)"
+        >
+          <i class="pi pi-trash"></i>
+        </button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+<p-confirmDialog></p-confirmDialog>

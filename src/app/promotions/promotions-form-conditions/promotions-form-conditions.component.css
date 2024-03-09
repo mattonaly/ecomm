@@ -1,0 +1,59 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+input,
+p-dropdown {
+  width: 100%;
+}
+
+.card {
+  height: 100%;
+}
+
+form {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+}
+
+.control {
+  display: flex;
+  justify-content: space-between;
+
+  i {
+    margin: auto 0 auto 0;
+    color: var(--primary-red);
+  }
+}
+
+.control-required {
+  position: relative;
+}
+
+.control-required::after {
+  content: "*";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  color: var(--primary-red);
+}
+
+.control-dates {
+  display: flex;
+  justify-content: space-between;
+
+  p-calendar:last-of-type {
+    margin-left: auto;
+  }
+}
+
+p-calendar.control-required::after {
+  right: 2px;
+}
+
+.control-pricing-options > div {
+  display: flex;
+  gap: 48px;
+}

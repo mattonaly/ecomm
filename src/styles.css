@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+:root {
+  --primary-red: #b30000;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.color-primary-red {
+  color: var(--primary-red);
+}
+
+.p-dropdown {
+  width: 100%;
+}
+
+.card {
+  background-color: var(--bluegray-100);
+  padding: 32px 8px 32px 32px;
+}
+
+.card header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h4 {
+    margin: 0;
+  }
+
+  margin-bottom: 16px;
+  margin-right: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid white;
+}
+
+.divider {
+  margin-right: 16px;
+  border-top: 1px solid white;
+}

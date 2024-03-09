@@ -1,0 +1,98 @@
+<div class="card">
+  <header>
+    <h4>Conditions</h4>
+    <span class="color-primary-red">* is required</span>
+  </header>
+  <form [formGroup]="form">
+    <div class="control control-required">
+      <p-dropdown
+        optionLabel="name"
+        formControlName="destination"
+        placeholder="Destination"
+        [options]="destinations"
+      ></p-dropdown>
+      <i class="pi pi-info-circle" pTooltip="Lorem ipsum"></i>
+    </div>
+    <div class="control control-required">
+      <p-dropdown
+        optionLabel="name"
+        formControlName="type"
+        placeholder="Type"
+        [options]="types"
+      ></p-dropdown>
+      <i class="pi pi-info-circle" pTooltip="Lorem ipsum"></i>
+    </div>
+    <div class="control">
+      <input
+        pInputText
+        disabled
+        readonly="readonly"
+        type="number"
+        placeholder="Benefit amount"
+      />
+      <i class="pi pi-info-circle" pTooltip="Lorem ipsum"></i>
+    </div>
+    <span class="divider"></span>
+    <div class="control control-dates">
+      <p-calendar
+        class="control-required"
+        formControlName="startDate"
+        placeholder="Start date"
+        [iconDisplay]="'input'"
+        [showIcon]="true"
+      ></p-calendar>
+      <p-calendar
+        formControlName="finishDate"
+        placeholder="Finish date"
+        [iconDisplay]="'input'"
+        [showIcon]="true"
+      ></p-calendar>
+      <i class="pi pi-info-circle" pTooltip="Lorem ipsum"></i>
+    </div>
+    <div class="control control-pricing-options">
+      <div>
+        <span>
+          <p-radioButton
+            name="pricingOptions"
+            value="businessConditions"
+            formControlName="pricingOptions"
+          ></p-radioButton>
+          <label for="businessConditions">Business conditions</label>
+        </span>
+        <span>
+          <p-radioButton
+            name="pricingOptions"
+            value="basePrice"
+            formControlName="pricingOptions"
+          ></p-radioButton>
+          <label for="basePrice">Base price 100%</label>
+        </span>
+      </div>
+      <i class="pi pi-info-circle" pTooltip="Lorem ipsum"></i>
+    </div>
+    <div class="control">
+      <span>
+        <p-checkbox
+          name="connectWithOtherPromotions"
+          formControlName="connectWithOtherPromotions"
+          [binary]="true"
+        ></p-checkbox>
+        <label for="connectWithOtherPromotions"
+          >Connect with other promotions</label
+        >
+      </span>
+      <i class="pi pi-info-circle" pTooltip="Lorem ipsum"></i>
+    </div>
+    <div class="control">
+      <span>
+        <p-checkbox
+          name="backPromotion"
+          formControlName="backPromotion"
+          [binary]="true"
+        ></p-checkbox>
+        <label for="backPromotion">Back promotion</label>
+      </span>
+      <i class="pi pi-info-circle" pTooltip="Lorem ipsum"></i>
+    </div>
+  </form>
+</div>
