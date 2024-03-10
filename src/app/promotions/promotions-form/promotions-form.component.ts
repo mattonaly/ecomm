@@ -92,7 +92,6 @@ export class PromotionsFormComponent implements OnInit {
 
   public onStepSelected(index: number): void {
     this.selectedIndex = index;
-    console.log('Step selected', index);
   }
 
   public save(): void {
