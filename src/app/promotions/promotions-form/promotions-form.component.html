@@ -1,6 +1,6 @@
 <app-promotions-form-stepper
   [steps]="steps"
-  [disabled]="descriptionForm.invalid"
+  [disabled]="descriptionForm.errors?.['requireMarketingOrTechnical']"
   (stepSelectionChange)="onStepSelected($event)"
 ></app-promotions-form-stepper>
 <content>
