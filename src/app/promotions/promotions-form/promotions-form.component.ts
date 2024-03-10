@@ -82,9 +82,9 @@ export class PromotionsFormComponent implements OnInit {
   ) {}
 
   public ngOnInit(): void {
-    this.handleFormDraft();
-
     this.setupFormFromRoute();
+
+    this.handleFormDraft();
 
     this.handleDraftSaving();
   }
