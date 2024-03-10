@@ -5,6 +5,7 @@ import {
   FormControl,
   ReactiveFormsModule,
   UntypedFormGroup,
+  Validators,
 } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { filter, map, switchMap, tap } from 'rxjs';
@@ -51,17 +52,17 @@ export class PromotionsFormComponent implements OnInit {
 
   public descriptionForm: UntypedFormGroup = new UntypedFormGroup(
     {
-      marketingName: new FormControl(null),
+      marketingName: new FormControl(null, Validators.required),
       technicalName: new FormControl(null),
       description: new FormControl(null),
     },
     [requireMarketingOrTechnical()]
   );
   public conditionsForm: UntypedFormGroup = new UntypedFormGroup({
-    destination: new FormControl(null),
-    type: new FormControl(null),
+    destination: new FormControl(null, Validators.required),
+    type: new FormControl(null, Validators.required),
     benefitAmount: new FormControl({ value: null, disabled: true }),
-    startDate: new FormControl(null),
+    startDate: new FormControl(null, Validators.required),
     finishDate: new FormControl(null),
     pricingOptions: new FormControl(null),
     connectWithOtherPromotions: new FormControl(false),

@@ -29,7 +29,10 @@
   <ng-container *ngIf="selectedIndex === 8">
     <section>
       <div>
-        <button class="save-button" (click)="save()">Save</button>
+        <button class="save-button" [disabled]="form.invalid" (click)="save()">
+          Save
+        </button>
+        <div *ngIf="form.invalid" class="color-primary-red">Form invalid</div>
       </div>
     </section>
   </ng-container>
